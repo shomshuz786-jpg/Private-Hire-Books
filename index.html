@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#005d7b">
+<title>Private Hire Books — Online</title>
+<style>
+:root{--teal:#005d7b;--teal2:#087f9f;--bg:#f3f6f8;--card:#fff;--text:#10212b;--muted:#64748b;--line:#dbe3e8;--green:#087f5b;--red:#b42318;--yellow:#f4c542;--nav:#0b2f3a;--shadow:0 8px 28px rgba(16,33,43,.08)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text)}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.app{min-height:100vh}.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:12px max(16px,env(safe-area-inset-left))}.topin{max-width:1180px;margin:auto;display:flex;align-items:center;gap:12px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--teal);font-size:18px}.logo{width:36px;height:36px;border-radius:10px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900}.topright{margin-left:auto;display:flex;gap:8px}.iconbtn{border:1px solid var(--line);background:#fff;border-radius:10px;width:40px;height:40px}.layout{max-width:1180px;margin:auto;display:grid;grid-template-columns:220px 1fr;gap:20px;padding:20px 16px 100px}.side{position:sticky;top:78px;height:max-content}.nav{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:var(--shadow)}.nav button{width:100%;border:0;background:transparent;text-align:left;padding:11px 12px;border-radius:10px;color:#425466;font-weight:700}.nav button.active{background:#e5f4f8;color:var(--teal)}.main{min-width:0}.viewtitle{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:18px}.viewtitle h1{margin:0;font-size:28px}.muted{color:var(--muted)}.grid{display:grid;gap:14px}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}.stat{min-height:128px}.stat .label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:var(--muted)}.stat .value{font-size:30px;font-weight:900;margin-top:8px}.green{color:var(--green)}.red{color:var(--red)}.teal{color:var(--teal)}.yellow{background:#fff7d6}.hero{background:linear-gradient(135deg,#005d7b,#0c7892);color:#fff;border:0}.hero .muted{color:#d8eef4}.btn{border:0;border-radius:11px;padding:10px 14px;font-weight:800}.primary{background:var(--teal);color:#fff}.secondary{background:#edf3f5;color:#23404b}.danger{background:#fff0ef;color:var(--red)}.small{font-size:12px;padding:7px 10px}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.between{display:flex;justify-content:space-between;align-items:center;gap:12px}.section{margin-top:18px}.section h2{font-size:17px;margin:0 0 10px}.tablewrap{overflow:auto}.table{width:100%;border-collapse:collapse}.table th,.table td{padding:11px 9px;border-bottom:1px solid var(--line);text-align:left;font-size:13px;white-space:nowrap}.table th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}.form{display:grid;gap:12px}.field label{display:block;font-size:12px;font-weight:800;color:#526474;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;border:1px solid #cbd7dd;border-radius:10px;padding:10px 11px;background:#fff;color:var(--text)}.field textarea{min-height:90px;resize:vertical}.actions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}.pill{display:inline-flex;padding:5px 8px;border-radius:999px;background:#eef5f7;color:var(--teal);font-size:11px;font-weight:800}.progress{height:10px;background:#e8eef1;border-radius:99px;overflow:hidden}.progress>i{display:block;height:100%;background:var(--teal);border-radius:99px}.notice{padding:12px;border-radius:12px;background:#eef8fb;border:1px solid #c7e8f0;font-size:13px}.tabs{display:flex;gap:6px;overflow:auto;margin-bottom:14px}.tabs button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:9px 12px;font-weight:700;white-space:nowrap}.tabs button.active{background:var(--teal);color:#fff;border-color:var(--teal)}.empty{text-align:center;padding:38px;color:var(--muted)}.bottom{display:none}.modalback{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:50;display:grid;place-items:center;padding:16px}.modal{width:min(680px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:18px;padding:20px;box-shadow:0 24px 80px rgba(0,0,0,.25)}.toast{position:fixed;right:18px;bottom:18px;background:#10212b;color:#fff;padding:12px 15px;border-radius:11px;z-index:80;box-shadow:var(--shadow)}.hidden{display:none!important}.dark{--bg:#0f1720;--card:#16232c;--text:#e8f0f3;--muted:#9db0ba;--line:#29404b}.dark .top,.dark .iconbtn,.dark .nav,.dark .tabs button,.dark .field input,.dark .field select,.dark .field textarea{background:#16232c;color:var(--text)}.dark .secondary{background:#223640;color:#e8f0f3}.dark .nav button{color:#a9bbc3}.dark .nav button.active{background:#173e4b;color:#7bd1e8}.dark .table th,.dark .table td{border-color:#29404b}.dark .notice{background:#15323d;border-color:#285564}.dark .progress{background:#263841}
+@media(max-width:850px){.layout{grid-template-columns:1fr;padding:14px 12px 86px}.side{display:none}.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}.g2{grid-template-columns:1fr}.bottom{display:grid;position:fixed;bottom:0;left:0;right:0;z-index:30;grid-template-columns:repeat(5,1fr);background:#fff;border-top:1px solid var(--line);padding:7px 5px calc(7px + env(safe-area-inset-bottom))}.bottom button{border:0;background:transparent;font-size:10px;font-weight:800;color:#60727c;padding:5px}.bottom button.active{color:var(--teal)}.viewtitle h1{font-size:23px}.stat .value{font-size:24px}}
+@media(max-width:480px){.g4{grid-template-columns:1fr 1fr}.card{padding:14px}.top{padding:9px 10px}.brand span{display:none}}
+@media print{.top,.side,.bottom,.actions,.tabs{display:none!important}.layout{display:block;padding:0}.card{box-shadow:none;break-inside:avoid}.main{width:100%}body{background:#fff}}
+</style>
+</head>
+<body>
+<div id="app"></div><input id="top-import-file" type="file" accept=".json,application/json" hidden>
+<script>
+(()=>{"use strict";
+const KEY="phb-offline-v1";
+const state=JSON.parse(localStorage.getItem(KEY)||"null")||{
+ driver:{name:"",business:"Private Hire Driver",utr:"",taxYear:"2026/27"},
+ income:[], expenses:[], mileage:[], receipts:[], theme:"light", tab:"dashboard",
+ tax:{otherIncome:0,pension:0,studentLoan:false}, settings:{currency:"GBP",vat:false}
+};
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const save=()=>localStorage.setItem(KEY,JSON.stringify(state));
+const money=n=>new Intl.NumberFormat("en-GB",{style:"currency",currency:state.settings.currency||"GBP"}).format(Number(n)||0);
+const num=v=>Number(v)||0;
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const today=()=>new Date().toISOString().slice(0,10);
+function totals(){
+ const income=state.income.reduce((a,x)=>a+num(x.amount),0);
+ const expenses=state.expenses.reduce((a,x)=>a+num(x.amount),0);
+ const businessMiles=state.mileage.reduce((a,x)=>a+num(x.businessMiles),0);
+ const mileageRelief=Math.min(businessMiles,10000)*.45+Math.max(0,businessMiles-10000)*.25;
+ return {income,expenses,profit:income-expenses,businessMiles,mileageRelief};
+}
+function taxEstimate(){
+ const t=totals(), profit=Math.max(0,t.profit), other=num(state.tax.otherIncome), pension=num(state.tax.pension);
+ const taxable=Math.max(0,profit+other-pension-12570);
+ const basic=Math.min(taxable,37700)*.2;
+ const higher=Math.max(0,taxable-37700)*.4;
+ const incomeTax=basic+higher;
+ const ni=Math.max(0,profit-12570)*.06;
+ return {profit,taxable,incomeTax,ni,total:incomeTax+ni,reserve:(incomeTax+ni)*1.05};
+}
+function icon(x){return `<span aria-hidden="true" style="font-size:16px">${x}</span>`}
+const nav=[
+ ["dashboard","Dashboard","⌂"],["income","Income","£"],["expenses","Expenses","▣"],["digital","Digital Tax","✓"],["analysis","Analysis","▥"],["advisor","AI Advisor","✦"],["settings","Settings","⚙"]
+];
+function shell(){
+ document.body.classList.toggle("dark",state.theme==="dark");
+ $("#app").innerHTML=`
+ <header class="top"><div class="topin">
+  <div class="brand"><div class="logo">PH</div><span>Private Hire Books</span></div>
+  <div class="topright"><button class="iconbtn" data-action="import-click" title="Import JSON">⇧</button><button class="iconbtn" data-action="export" title="Export JSON">⇩</button><button class="iconbtn" data-action="theme" title="Toggle dark mode">${state.theme==="dark"?"☀":"☾"}</button></div>
+ </div></header>
+ <div class="layout"><aside class="side"><nav class="nav">${nav.map(n=>`<button class="${state.tab===n[0]?"active":""}" data-tab="${n[0]}">${icon(n[2])} &nbsp;${n[1]}</button>`).join("")}</nav></aside>
+ <main class="main" id="main"></main></div>
+ <nav class="bottom">${nav.slice(0,5).map(n=>`<button class="${state.tab===n[0]?"active":""}" data-tab="${n[0]}">${icon(n[2])}<br>${n[1]}</button>`).join("")}</nav>`;
+ render();
+}
+function render(){const m=$("#main");if(!m)return;({dashboard:dashboard,income:incomeView,expenses:expenseView,digital:digitalView,analysis:analysisView,advisor:advisorView,settings:settingsView}[state.tab]||dashboard)(m)}
+function title(h,sub="",actions=""){return `<div class="viewtitle"><div><h1>${h}</h1>${sub?`<div class="muted" style="margin-top:4px">${sub}</div>`:""}</div><div class="actions">${actions}</div></div>`}
+function dashboard(m){
+ const t=totals(), tx=taxEstimate(), months={}; state.income.forEach(x=>{const k=(x.date||"").slice(0,7);months[k]=(months[k]||0)+num(x.amount)});
+ const recent=[...state.income.map(x=>({...x,type:"Income"})),...state.expenses.map(x=>({...x,type:"Expense"}))].sort((a,b)=>(b.date||"").localeCompare(a.date||"")).slice(0,6);
+ m.innerHTML=title("Dashboard",state.driver.name?`Welcome back, ${esc(state.driver.name)}`:"Your offline bookkeeping workspace",
+ `<button class="btn primary" data-action="add-income">+ Income</button><button class="btn secondary" data-action="add-expense">+ Expense</button>`)+
+ `<div class="grid g4">
+  <div class="card stat"><div class="label">Total income</div><div class="value green">${money(t.income)}</div><div class="muted">${state.income.length} entries</div></div>
+  <div class="card stat"><div class="label">Expenses</div><div class="value red">${money(t.expenses)}</div><div class="muted">${state.expenses.length} entries</div></div>
+  <div class="card stat"><div class="label">Net profit</div><div class="value teal">${money(t.profit)}</div><div class="muted">Before tax</div></div>
+  <div class="card stat"><div class="label">Tax reserve</div><div class="value">${money(tx.reserve)}</div><div class="muted">Indicative estimate</div></div>
+ </div>
+ <div class="grid g2 section">
+  <div class="card hero"><div class="between"><div><div class="pill" style="background:#ffffff22;color:#fff">ONLINE-READY</div><h2 style="margin:12px 0 5px">Works online or offline</h2><div class="muted">Host this single HTML file on any static web host. Your records remain in this browser unless you export them.</div></div><div style="font-size:48px">▣</div></div>
+   <div style="margin-top:18px" class="row"><button class="btn" style="background:#fff;color:var(--teal)" data-action="add-mileage">Log mileage</button><button class="btn" style="background:#ffffff22;color:#fff;border:1px solid #ffffff55" data-tab="digital">Digital Tax</button></div>
+  </div>
+  <div class="card"><div class="between"><h2 style="margin:0">Tax snapshot</h2><span class="pill">${esc(state.driver.taxYear)}</span></div>
+   <div class="section"><div class="between"><span>Estimated tax + NI</span><b>${money(tx.total)}</b></div><div class="progress" style="margin-top:8px"><i style="width:${Math.min(100,tx.total/Math.max(1,t.profit)*100)}%"></i></div></div>
+   <div class="notice section">Indicative only. Confirm your position with HMRC or an accountant before submitting a return.</div>
+  </div>
+ </div>
+ <div class="card section"><div class="between"><h2 style="margin:0">Recent activity</h2><button class="btn secondary small" data-action="view-all">View all</button></div>
+ ${recent.length?`<div class="tablewrap"><table class="table"><thead><tr><th>Date</th><th>Description</th><th>Type</th><th>Amount</th></tr></thead><tbody>${recent.map(x=>`<tr><td>${esc(x.date)}</td><td>${esc(x.description||x.vendor||"Entry")}</td><td><span class="pill">${x.type}</span></td><td class="${x.type==="Income"?"green":"red"}">${x.type==="Income"?"+":"-"}${money(x.amount)}</td></tr>`).join("")}</tbody></table></div>`:`<div class="empty">No entries yet. Add your first income or expense above.</div>`}
+ </div>`;
+}
+function incomeView(m){
+ const total=state.income.reduce((a,x)=>a+num(x.amount),0);
+ m.innerHTML=title("Income","Record fares, cash, card and platform income",`<button class="btn primary" data-action="add-income">+ Add income</button>`)+
+ `<div class="grid g3"><div class="card stat"><div class="label">Recorded income</div><div class="value green">${money(total)}</div></div><div class="card stat"><div class="label">Entries</div><div class="value">${state.income.length}</div></div><div class="card stat"><div class="label">Average entry</div><div class="value">${money(state.income.length?total/state.income.length:0)}</div></div></div>
+ <div class="card section"><div class="tablewrap"><table class="table"><thead><tr><th>Date</th><th>Description</th><th>Source</th><th>Amount</th><th></th></tr></thead><tbody>${state.income.length?state.income.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<tr><td>${esc(x.date)}</td><td>${esc(x.description)}</td><td>${esc(x.source||"—")}</td><td class="green">${money(x.amount)}</td><td><button class="btn danger small" data-delete-income="${x.id}">Delete</button></td></tr>`).join(""):`<tr><td colspan="5" class="empty">No income recorded.</td></tr>`}</tbody></table></div></div>`;
+}
+function expenseView(m){
+ const total=state.expenses.reduce((a,x)=>a+num(x.amount),0);
+ const cats={};state.expenses.forEach(x=>cats[x.category]=(cats[x.category]||0)+num(x.amount));
+ m.innerHTML=title("Expenses","Track fuel, insurance, maintenance, parking and other costs",`<button class="btn primary" data-action="add-expense">+ Add expense</button>`)+
+ `<div class="grid g3"><div class="card stat"><div class="label">Recorded expenses</div><div class="value red">${money(total)}</div></div><div class="card stat"><div class="label">Entries</div><div class="value">${state.expenses.length}</div></div><div class="card stat"><div class="label">Top category</div><div class="value" style="font-size:20px">${esc(Object.entries(cats).sort((a,b)=>b[1]-a[1])[0]?.[0]||"—")}</div></div></div>
+ <div class="card section"><div class="tablewrap"><table class="table"><thead><tr><th>Date</th><th>Vendor</th><th>Category</th><th>Amount</th><th>Receipt</th><th></th></tr></thead><tbody>${state.expenses.length?state.expenses.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<tr><td>${esc(x.date)}</td><td>${esc(x.vendor)}</td><td>${esc(x.category)}</td><td class="red">${money(x.amount)}</td><td>${x.receipt?"✓":"—"}</td><td><button class="btn danger small" data-delete-expense="${x.id}">Delete</button></td></tr>`).join(""):`<tr><td colspan="6" class="empty">No expenses recorded.</td></tr>`}</tbody></table></div></div>`;
+}
+function digitalView(m){
+ const t=totals(),tx=taxEstimate();
+ m.innerHTML=title("Digital Tax","MTD preparation and digital record keeping",`<button class="btn secondary" data-action="print">Print / Save PDF</button><button class="btn primary" data-action="export">Export backup</button>`)+
+ `<div class="notice">This edition prepares and validates your records locally. It does <b>not</b> transmit anything to HMRC without a connected filing service.</div>
+ <div class="grid g2 section">
+  <div class="card"><div class="between"><h2 style="margin:0">Digital record health</h2><span class="pill">Local</span></div>
+   <div class="section"><div class="between"><span>Income records</span><b>${state.income.length}</b></div><div class="between" style="margin-top:8px"><span>Expense records</span><b>${state.expenses.length}</b></div><div class="between" style="margin-top:8px"><span>Mileage records</span><b>${state.mileage.length}</b></div><div class="between" style="margin-top:8px"><span>Receipts linked</span><b>${state.receipts.length}</b></div></div>
+   <div class="actions section"><button class="btn primary" data-action="validate">Run local validation</button></div>
+  </div>
+  <div class="card"><h2 style="margin:0">Tax year forecast</h2><div class="section grid g2"><div><div class="muted">Profit</div><b style="font-size:22px">${money(tx.profit)}</b></div><div><div class="muted">Tax + NI</div><b style="font-size:22px">${money(tx.total)}</b></div></div><div class="notice section">Keep digital records and receipts for the applicable HMRC retention period. This calculator is an estimate, not a filing.</div></div>
+ </div>
+ <div class="card section"><div class="between"><h2 style="margin:0">Mileage log</h2><button class="btn primary small" data-action="add-mileage">+ Add mileage</button></div>
+ <div class="tablewrap"><table class="table"><thead><tr><th>Date</th><th>Journey</th><th>Business miles</th><th>Relief</th><th></th></tr></thead><tbody>${state.mileage.length?state.mileage.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<tr><td>${esc(x.date)}</td><td>${esc(x.journey)}</td><td>${num(x.businessMiles).toFixed(1)}</td><td>${money(Math.min(num(x.businessMiles),10000)*.45+Math.max(0,num(x.businessMiles)-10000)*.25)}</td><td><button class="btn danger small" data-delete-mileage="${x.id}">Delete</button></td></tr>`).join(""):`<tr><td colspan="5" class="empty">No mileage logged.</td></tr>`}</tbody></table></div></div>`;
+}
+function analysisView(m){
+ const t=totals(), by={};state.expenses.forEach(x=>by[x.category]=(by[x.category]||0)+num(x.amount));
+ const rows=Object.entries(by).sort((a,b)=>b[1]-a[1]);
+ m.innerHTML=title("Analysis","Simple offline business performance view",`<button class="btn secondary" data-action="print">Print report</button>`)+
+ `<div class="grid g3"><div class="card stat"><div class="label">Profit margin</div><div class="value">${t.income?((t.profit/t.income)*100).toFixed(1):"0.0"}%</div></div><div class="card stat"><div class="label">Mileage relief</div><div class="value">${money(t.mileageRelief)}</div></div><div class="card stat"><div class="label">Income less expenses</div><div class="value teal">${money(t.profit)}</div></div></div>
+ <div class="grid g2 section"><div class="card"><h2 style="margin:0 0 12px">Expense breakdown</h2>${rows.length?rows.map(([k,v])=>`<div style="margin:12px 0"><div class="between"><span>${esc(k)}</span><b>${money(v)}</b></div><div class="progress" style="margin-top:6px"><i style="width:${t.expenses?Math.min(100,v/t.expenses*100):0}%"></i></div></div>`).join(""):`<div class="empty">Add expenses to see the breakdown.</div>`}</div>
+ <div class="card"><h2 style="margin:0 0 12px">Tax estimate</h2><div class="between"><span>Taxable profit</span><b>${money(taxEstimate().taxable)}</b></div><div class="between" style="margin-top:10px"><span>Income tax</span><b>${money(taxEstimate().incomeTax)}</b></div><div class="between" style="margin-top:10px"><span>Indicative NI</span><b>${money(taxEstimate().ni)}</b></div><hr style="border:0;border-top:1px solid var(--line);margin:15px 0"><div class="between"><b>Suggested reserve</b><b class="teal">${money(taxEstimate().reserve)}</b></div></div></div>`;
+}
+function advisorView(m){
+ const t=totals(),tx=taxEstimate(),tips=[];
+ if(!state.driver.name)tips.push("Complete your driver profile in Settings.");
+ if(!state.income.length)tips.push("Record your fares regularly so your profit and tax forecast stays current.");
+ if(!state.expenses.length)tips.push("Record fuel, insurance, maintenance and other allowable business costs as they occur.");
+ if(t.profit>0)tips.push(`Your current recorded profit is ${money(t.profit)}. Consider setting aside about ${money(tx.reserve)} based on this simple estimate.`);
+ if(t.businessMiles===0)tips.push("Start a mileage log if you use mileage-based relief rather than actual vehicle costs.");
+ if(!tips.length)tips.push("Your core records look populated. Review your tax estimate and export a backup regularly.");
+ m.innerHTML=title("AI Advisor","Private, rule-based guidance — no cloud AI required",`<button class="btn primary" data-action="advisor-refresh">Refresh advice</button>`)+
+ `<div class="card hero"><div style="font-size:12px;letter-spacing:.08em;font-weight:900">OFFLINE ADVISOR</div><h2>Practical next steps</h2><p class="muted">This version deliberately keeps advice on-device. It does not send your financial records to an AI service.</p></div>
+ <div class="card section"><h2 style="margin:0 0 10px">Recommendations</h2>${tips.map((x,i)=>`<div class="notice" style="margin-top:9px"><b>${i+1}.</b> ${esc(x)}</div>`).join("")}</div>
+ <div class="card section"><h2 style="margin:0 0 8px">Quick checks</h2><div class="grid g2"><div>Income recorded <b>${state.income.length}</b></div><div>Expenses recorded <b>${state.expenses.length}</b></div><div>Mileage <b>${t.businessMiles.toFixed(1)} mi</b></div><div>Receipts <b>${state.receipts.length}</b></div></div></div>`;
+}
+function settingsView(m){
+ m.innerHTML=title("Settings","Profile, backup and privacy controls",`<button class="btn primary" data-action="save-settings">Save settings</button>`)+
+ `<div class="grid g2"><div class="card"><h2 style="margin:0 0 14px">Driver profile</h2><div class="form">
+ <div class="field"><label>Name</label><input id="s-name" value="${esc(state.driver.name)}" placeholder="Your name"></div>
+ <div class="field"><label>Business name</label><input id="s-business" value="${esc(state.driver.business)}"></div>
+ <div class="field"><label>UTR (optional)</label><input id="s-utr" value="${esc(state.driver.utr)}" inputmode="numeric"></div>
+ <div class="field"><label>Tax year</label><select id="s-year">${["2025/26","2026/27","2027/28"].map(x=>`<option ${x===state.driver.taxYear?"selected":""}>${x}</option>`).join("")}</select></div>
+ </div></div>
+ <div class="card"><h2 style="margin:0 0 14px">Preferences</h2><div class="form">
+ <div class="field"><label>Currency</label><select id="s-currency"><option ${state.settings.currency==="GBP"?"selected":""}>GBP</option><option ${state.settings.currency==="EUR"?"selected":""}>EUR</option><option ${state.settings.currency==="USD"?"selected":""}>USD</option></select></div>
+ <div class="field"><label>Other taxable income</label><input id="s-other" type="number" step=".01" value="${num(state.tax.otherIncome)}"></div>
+ <div class="field"><label>Pension contributions</label><input id="s-pension" type="number" step=".01" value="${num(state.tax.pension)}"></div>
+ <label class="row"><input id="s-student" type="checkbox" ${state.tax.studentLoan?"checked":""}> Student loan applies</label>
+ </div></div></div>
+ <div class="grid g2 section"><div class="card"><h2 style="margin:0 0 8px">Backup</h2><p class="muted">Export a complete JSON backup, or import a previous backup.</p><div class="actions"><button class="btn secondary" data-action="export">Export JSON</button><label class="btn secondary">Import JSON<input id="import-file" type="file" accept=".json,application/json" hidden></label></div></div>
+ <div class="card"><h2 style="margin:0 0 8px">Privacy</h2><p class="muted">Records are stored in this browser's localStorage. Export JSON regularly to move or back up your data.</p><button class="btn danger" data-action="clear-data">Delete all local data</button></div></div>`;
+}
+function modal(title,body){const d=document.createElement("div");d.className="modalback";d.id="modal";d.innerHTML=`<div class="modal"><div class="between"><h2 style="margin:0">${title}</h2><button class="iconbtn" data-action="close-modal">×</button></div><div style="margin-top:16px">${body}</div></div>`;document.body.appendChild(d)}
+function closeModal(){document.getElementById("modal")?.remove()}
+function incomeModal(){
+ modal("Add income",`<form id="income-form" class="form">
+ <div class="grid g2"><div class="field"><label>Date</label><input name="date" type="date" value="${today()}" required></div><div class="field"><label>Amount</label><input name="amount" type="number" min="0" step=".01" required></div></div>
+ <div class="field"><label>Description</label><input name="description" placeholder="e.g. Uber fares, cash fares" required></div><div class="field"><label>Source</label><select name="source"><option>Uber</option><option>Bolt</option><option>Free fares / direct</option><option>Cash</option><option>Card</option><option>Other</option></select></div>
+ <div class="actions"><button type="button" class="btn secondary" data-action="close-modal">Cancel</button><button class="btn primary">Save income</button></div></form>`);
+}
+function expenseModal(){
+ const cats=["Fuel","Insurance","Maintenance","Tolls & Parking","Licensing/MOT","Operator Fee","Mobile/Data","Cleaning","Office","Other"];
+ modal("Add expense",`<form id="expense-form" class="form">
+ <div class="grid g2"><div class="field"><label>Date</label><input name="date" type="date" value="${today()}" required></div><div class="field"><label>Amount</label><input name="amount" type="number" min="0" step=".01" required></div></div>
+ <div class="field"><label>Vendor</label><input name="vendor" placeholder="e.g. Shell, insurer, garage" required></div>
+ <div class="field"><label>Category</label><select name="category">${cats.map(x=>`<option>${x}</option>`).join("")}</select></div>
+ <div class="field"><label>Notes</label><textarea name="notes" placeholder="Business-use details"></textarea></div>
+ <label class="row"><input name="receipt" type="checkbox"> Receipt available</label>
+ <div class="actions"><button type="button" class="btn secondary" data-action="close-modal">Cancel</button><button class="btn primary">Save expense</button></div></form>`);
+}
+function mileageModal(){
+ modal("Log mileage",`<form id="mileage-form" class="form"><div class="grid g2"><div class="field"><label>Date</label><input name="date" type="date" value="${today()}" required></div><div class="field"><label>Business miles</label><input name="businessMiles" type="number" min="0" step=".1" required></div></div><div class="field"><label>Journey</label><input name="journey" placeholder="e.g. Cambridge → Stansted → Cambridge" required></div><div class="actions"><button type="button" class="btn secondary" data-action="close-modal">Cancel</button><button class="btn primary">Save mileage</button></div></form>`);
+}
+function toast(msg){const d=document.createElement("div");d.className="toast";d.textContent=msg;document.body.appendChild(d);setTimeout(()=>d.remove(),2400)}
+function exportData(){
+ const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=`private-hire-books-${today()}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);toast("Backup exported");
+}
+function printReport(){window.print()}
+function localValidate(){const problems=[];state.income.forEach((x,i)=>{if(!x.date||num(x.amount)<0)problems.push(`Income row ${i+1} needs a valid date and amount.`)});state.expenses.forEach((x,i)=>{if(!x.date||num(x.amount)<0)problems.push(`Expense row ${i+1} needs a valid date and amount.`)});toast(problems.length?`${problems.length} issue(s) found`:"All local records passed basic validation")}
+document.addEventListener("click",e=>{
+ const tab=e.target.closest("[data-tab]")?.dataset.tab;if(tab){state.tab=tab;save();shell();return}
+ const a=e.target.closest("[data-action]")?.dataset.action;if(a){
+  if(a==="theme"){state.theme=state.theme==="dark"?"light":"dark";save();shell()} else if(a==="import-click"){$("#top-import-file").click()}
+  else if(a==="add-income")incomeModal(); else if(a==="add-expense")expenseModal(); else if(a==="add-mileage")mileageModal();
+  else if(a==="close-modal")closeModal(); else if(a==="export")exportData(); else if(a==="print")printReport(); else if(a==="validate")localValidate();
+  else if(a==="advisor-refresh"){toast("Advice refreshed");render()}
+  else if(a==="view-all"){state.tab="income";save();shell()}
+  else if(a==="save-settings"){saveSettings()}
+  else if(a==="clear-data"){if(confirm("Delete all locally stored Private Hire Books data? This cannot be undone.")){localStorage.removeItem(KEY);location.reload()}}
+ }
+ const di=e.target.closest("[data-delete-income]")?.dataset.deleteIncome;if(di&&confirm("Delete this income entry?")){state.income=state.income.filter(x=>x.id!==di);save();render();toast("Income deleted")}
+ const de=e.target.closest("[data-delete-expense]")?.dataset.deleteExpense;if(de&&confirm("Delete this expense entry?")){state.expenses=state.expenses.filter(x=>x.id!==de);save();render();toast("Expense deleted")}
+ const dm=e.target.closest("[data-delete-mileage]")?.dataset.deleteMileage;if(dm&&confirm("Delete this mileage entry?")){state.mileage=state.mileage.filter(x=>x.id!==dm);save();render();toast("Mileage deleted")}
+});
+document.addEventListener("submit",e=>{
+ if(e.target.id==="income-form"){e.preventDefault();const f=new FormData(e.target);state.income.push({id:uid(),date:f.get("date"),amount:num(f.get("amount")),description:f.get("description"),source:f.get("source")});save();closeModal();render();toast("Income saved")}
+ if(e.target.id==="expense-form"){e.preventDefault();const f=new FormData(e.target);state.expenses.push({id:uid(),date:f.get("date"),amount:num(f.get("amount")),vendor:f.get("vendor"),category:f.get("category"),notes:f.get("notes"),receipt:f.get("receipt")==="on"});save();closeModal();render();toast("Expense saved")}
+ if(e.target.id==="mileage-form"){e.preventDefault();const f=new FormData(e.target);state.mileage.push({id:uid(),date:f.get("date"),businessMiles:num(f.get("businessMiles")),journey:f.get("journey")});save();closeModal();render();toast("Mileage saved")}
+});
+document.addEventListener("change",e=>{
+ if(e.target.id==="import-file"||e.target.id==="top-import-file"){
+ const file=e.target.files[0]; if(!file)return;
+ const r=new FileReader();
+ r.onload=()=>{try{
+   const x=JSON.parse(r.result);
+   if(!x.driver||!Array.isArray(x.income)||!Array.isArray(x.expenses)||!Array.isArray(x.mileage)) throw Error();
+   Object.assign(state,x); save(); shell(); toast("JSON backup imported");
+ }catch{toast("Invalid JSON backup file")}};
+ r.readAsText(file);
+ e.target.value="";
+}
+});
+function saveSettings(){
+ state.driver.name=$("#s-name").value.trim();state.driver.business=$("#s-business").value.trim()||"Private Hire Driver";state.driver.utr=$("#s-utr").value.trim();state.driver.taxYear=$("#s-year").value;state.settings.currency=$("#s-currency").value;state.tax.otherIncome=num($("#s-other").value);state.tax.pension=num($("#s-pension").value);state.tax.studentLoan=$("#s-student").checked;save();shell();toast("Settings saved")
+}
+shell();
+})();
+</script>
+</body>
+</html>
